@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>과목의 총점과 평균 계산</title>
+        <script>
+            // 영어 수학 국어 총점 평균
+            let engScore = 80;
+            let mathScore = 75;
+            let korScore = 90;
+            let total;
+            let average;      
+
+            // 총점
+            total = engScore + mathScore + korScore;
+            // 평균
+            average = total / 3;
+
+            document.write("총점 : " + total + "<br>");
+            document.write("평균 : " + average);
+
+            //자료형
+            console.log(typeof(total)); //int 형
+            console.log(typeof(average)); //float 형
+
+
+            let score = [80, 75 , 90];
+            let total2 = 0;
+            for(var i = 0; i<3; i++){
+                total2 = total2 + score[i]
+                console.log(total2);
+            }
+
+            
+        </script>
+    </head>
+    <body></body>
+</html>

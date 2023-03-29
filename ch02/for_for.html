@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>중첩 for 문</title>
+    <script>
+      // 5행 5열 테이블 - "가"출력
+      //   for (var i = 0; i < 5; i++) {
+      //     for (var j = 0; j < 5; j++) {
+      //       document.write("가");
+      //     }
+      //     document.write("<br>");
+      //   }
+      //i=0, j=0 가
+      //i=0, j=1 가
+      //i=0, j=2 가
+      //i=0, j=3 가
+      //i=0, j=4 가
+      //줄바꿈
+      //i=1, j=0 가
+      //i=1, j=1 가
+      //i=1, j=2 가
+      //i=1, j=3 가
+      //i=1, j=4 가
+      //줄바꿈
+
+      for (var i = 0; i < 5; i++) {
+        for (var j = 0; j <= i; j++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+      for (var i = 5; i > 0; i--) {
+        for (var j = 0; j < i; j++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+      /*
+       *
+       ***
+       *****
+       *******
+       *********
+       ***********
+       *********
+       *******
+       *****
+       ***
+       *
+       */
+      for (var i = 0; i < 11; i++) {
+        for (var j = 0; j < i + 5; j++) {
+          document.write("&nbsp");
+        }
+        for (var k = 0; k < i; k++) {
+          document.write("*");
+        }
+        for (var m = 0; m < i; m++) {
+          //  document.write("&nbsp");
+        }
+        document.write("<br>");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
