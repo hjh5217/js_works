@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>생성자 함수</title>
+    <script>
+      function Person(name, age, isMerried) {
+        this.name = name;
+        this.age = age;
+        this.isMerried = isMerried;
+
+        this.info = function () {
+          if (this.isMerried == true) {
+            console.log("기혼");
+          } else {
+            console.log("미혼");
+          }
+        };
+      }
+
+      let p1 = new Person("김연아", 31, true);
+      console.log(p1.name);
+      console.log(p1.age);
+      p1.info();
+      let p2 = new Person("이강인", 25);
+      console.log(p2.name);
+      console.log(p2.age);
+      let p3 = new Person("한주훈", 32);
+      console.log(p3.name);
+      console.log(p3.age);
+    </script>
+  </head>
+  <body></body>
+</html>
