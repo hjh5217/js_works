@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>토글</title>
+    <style>
+      body {
+        margin: 10px;
+      }
+      #pic {
+        margin-top: 20px;
+        display: none;
+      }
+    </style>
+    <script>
+      let show = 0;
+      /*
+      let img = document.getElementById("pic");
+      let btnText = document.getElementById("showButton");
+      console.log(img);
+      console.log(btnText);
+      null 찍힘
+*/
+      // function showHide() {
+      //   let img = document.getElementById("pic");
+      //   let btnText = document.getElementById("showButton");
+      //   console.log(img);
+      //   console.log(btnText);
+      //   if (show == 0) {
+      //     img.style.display = "none";
+      //     btnText.innerText = "보이기";
+      //     show = 1;
+      //   } else {
+      //     img.style.display = "block";
+      //     btnText.innerText = "숨기기";
+      //     show = 0;
+      //   }
+      // }
+
+      /*
+      toggle 기능
+      let state = true; //상태 변수(전역 변수)
+      
+      if(state){ // 조건이 상태변수
+        실행1
+        state = false;
+      }else{
+        실행2
+        state = true;
+      }
+      */
+
+      let state = true;
+      console.log(state);
+
+      function showHide() {
+        let img = document.getElementById("pic");
+        let btnText = document.getElementById("showButton");
+        if (state) {
+          img.style.display = "block";
+          btnText.innerText = "숨기기";
+          state = false;
+        } else {
+          img.style.display = "none";
+          btnText.innerText = "보이기";
+          state = true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="showHide()" id="showButton">보이기</button>
+    <div>
+      <img src="./img/flower1.jpg" alt="민들레" id="pic" />
+    </div>
+  </body>
+</html>

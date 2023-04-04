@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js 객체의 onclick 속성 사용</title>
+  </head>
+  <body>
+    <img src="./img/cup-1.png" alt="컵" id="pic" />
+    <script>
+      let pic = document.getElementById("pic");
+
+      /* 
+
+      //pic 객체의 onclick 속성 사용
+      pic.onclick = changePic;
+      function changePic() {
+        pic.src = "img/cup-2.png";
+      }
+
+      */
+
+      let state = true;
+      //익명 함수로 호출
+
+      //토글 방식의 클릭 이벤트 효과
+      pic.onclick = function () {
+        if (state) {
+          pic.src = "img/cup-2.png";
+          state = false;
+        } else {
+          pic.src = "img/cup-1.png";
+          state = true;
+        }
+      };
+    </script>
+  </body>
+</html>
