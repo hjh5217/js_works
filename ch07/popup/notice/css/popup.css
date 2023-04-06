@@ -1,0 +1,22 @@
+#wrap {
+  width: 300px;
+  height: 300px;
+  border: 3px solid blue;
+  margin: 50px auto;
+  padding: 30px;
+  position: relative;
+  border-radius: 10px;
+}
+h1 {
+  text-align: center;
+}
+ul li {
+  list-style-type: circle;
+}
+b {
+  color: red;
+}
+#close {
+  position: absolute;
+  right: 30px;
+}

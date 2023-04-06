@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    
+    <link rel="stylesheet" href="./css/reister.css">
+    <script src="./js/validation2.js"></script>
+  </head>
+  <body>
+    <div id="container">
+        <h2>회원 가입</h2>
+        <form action="processJoin.jsp" name="regForm">  
+            <ul>
+              <li>
+                <label for="id" class="field">아이디</label>
+                <input type="text" name="uid" id="id" placeholder="4~15자리의 영문과 숫자로 입력" required autofocus/>
+              </li>
+    
+              <li>
+                <label for="email" class="field">이메일</label>
+                <input type="email" name="email" id="email" required/>
+              </li>
+    
+              <li>
+                <label for="pw" class="field">비밀번호</label>
+                <input type="text" name="pw" id="pw" 
+                placeholder="8자리 이상" required/>
+              </li>
+              <li>
+                <label for="pwCheck" class="field">비밀번호 확인</label>
+                <input type="text" name="pwCheck" id="pwCheck" required />
+              </li>
+    
+              <li>
+                <label for="mailingCheck" class="field">메일링 수신</label>
+                <label
+                class="field"><input
+                    type="radio"
+                    name="mailingCheck"
+                    id="mailingCheck"
+                    value="yes"
+                  />예</label
+                >
+                <label
+                class="field"><input
+                    type="radio"
+                    name="mailingCheck"
+                    id="mailingCheck"
+                    value="no"
+                  />아니오</input
+                >
+              </li>
+              <li>
+                <input type="button" class="button" value="가입하기" onclick="checkMember()"></input>
+                <button class="button" type="reset">취소하기</button>
+              </li>
+            </ul>
+        </form>
+    </div>
+  </body>
+</html>
