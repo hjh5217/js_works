@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 2000px;
+  background: url(../img/bg5.jpg) no-repeat fixed;
+  background-size: cover;
+}
+h1 {
+  width: 200px;
+  font-size: 5em;
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  color: white;
+  animation-name: go_slide;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+@keyframes go_slide {
+  from {
+    left: -100px;
+    opacity: 0;
+  }
+  to {
+    left: 300px;
+    opacity: 1;
+  }
+}
+@keyframes back_slide {
+  from {
+    left: 300px;
+    opacity: 1;
+  }
+  to {
+    left: -100px;
+    opacity: 0;
+  }
+}
