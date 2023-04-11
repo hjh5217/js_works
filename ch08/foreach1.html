@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>foreach() 함수</title>
+  </head>
+  <body>
+    <h2>forEach()는 배열에서 각 요소에 대한 함수를 호출한다.</h2>
+    <p id="demo"></p>
+    <script>
+      let fruits = ["apple", "orange", "kiwi"];
+      let text = ""; // fruits 각 요소를 출력할 변수
+
+      fruits.forEach(myFunction);
+
+      function myFunction(item, index) {
+        text = index + " : " + item + "<br>"; // 각 요소 연결
+        console.log(index);
+        console.log(item);
+        console.log(text);
+      }
+
+      document.getElementById("demo").innerHTML = text;
+    </script>
+  </body>
+</html>

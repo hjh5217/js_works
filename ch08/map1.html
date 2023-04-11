@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array 객체 - map() 함수</title>
+  </head>
+  <body>
+    <h2>map() 함수 - 새로운 배열을 생성해 줌</h2>
+    <p id="demo"></p>
+    <script>
+      // 객체 = {속성 : 속성값}, 사용 .연산자 접근
+      // let obj = { 과일: "apple", 차: "sonata" };
+      // console.log(obj.과일);
+
+      const persons = [
+        { 이름: "Jobs", 성: "Steve" },
+        { 이름: "그래", 성: "장" },
+        { 이름: "Gates", 성: "Bill" },
+      ];
+
+      let arr = persons.map(myFunction);
+
+      document.getElementById("demo").innerHTML = arr;
+      console.log(persons[2].성 + persons[2].이름);
+      function myFunction(item) {
+        return [item.성, item.이름].join(" ");
+      }
+    </script>
+  </body>
+</html>
