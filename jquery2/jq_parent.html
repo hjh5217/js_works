@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery - parent() 함수</title>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <style>
+      .content {
+        width: 800px;
+        margin: 0 auto;
+      }
+      .wrap {
+        border: 2px solid #ddd;
+        color: lightgray;
+        padding: 5px;
+      }
+      ul {
+        border: 2px solid #ddd;
+        color: lightgray;
+        padding: 5px;
+        margin: 10px;
+      }
+      ul li {
+        border: 2px solid #ddd;
+        color: lightgray;
+        padding: 5px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="wrap">
+        <ul>
+          ul (grandparent)
+          <li>
+            li (direct parent)
+            <span><span></span></span>
+          </li>
+          <li>liparent</li>
+          <li>liparent</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("span").parent().css({ color: "red", border: "2px solid blue" });
+        $("span")
+          .parent()
+          .next()
+          .css({ color: "blue", border: "2px solid red" });
+      });
+    </script>
+  </body>
+</html>
