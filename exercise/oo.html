@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>로또 추첨 프로그램</title>
+        <style>
+            section {
+                width: 800px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            h1 {
+                display: inline-block;
+                border: 1px solid #ccc;
+                padding: 10px 20px;
+                background-color: #ccc;
+
+            }
+            p {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <h1>로또 번호 발표</h1>
+            <button type="button" onclick="play()">버튼</button>
+            <p id="display"></p>
+        </section>
+
+        <script>
+            function play() {
+                let name = [
+                    "유성길",
+                    "유성길",
+                    "유성길",
+                    "라",
+                    "마",
+                    "바",
+                    "사",
+                    "아",
+                    "자",
+                    "차",
+                    "카",
+                    "타",
+                    "파",
+                    "하"
+                ]
+                let numbers = new Array(5);
+
+                console.log(name);
+
+                for (let i = 0; i < numbers.length; i++) {
+                    let num = Math.floor(Math.random() * name.length);
+                    numbers[i] = num;
+
+                    //중복제거
+                    for (let j = 0; j < i; j++) {
+                        if (numbers[j] == numbers[i]) {
+                            // console.log("중복 : " + numbers[i])
+                            i--; //중복된 인덱스 삭제함
+                        }
+                    }
+                }
+                //numbers
+                let winners = new Array(5); //당첨자 이름을 저장할 배열 선언
+                for (let i = 0; i < winners.length; i++) {
+                    winners[i] = name[numbers[i]];
+                }
+                //출력
+                document
+                    .getElementById("display")
+                    .innerHTML = winners;
+            }
+        </script>
+    </body>
+</html>
